@@ -1,26 +1,26 @@
 # multi-wallet-sig
 multisig for Ethereum using detached signatures
 
-### Get Started
+## Get Started
 ```bash
 npm install multi-wallet-sig --save
 ```
-#### Test
+## Test
 ```bash
 npm test
 ```
-#### Functions
-##### ==createSig(s)(privateKey, multi, nonce, destination, value, data)==
+### Functions
+#### `createSig(s)(privateKey, multi, nonce, destination, value, data)`
 Signs a sha3 message hash with the private key
-###### Inputs
-- ==privateKey(s)== The ETH private key(s) to sign
-- ==multi== Multi sig wallet contract address
-- ==nonce==  Multi contract nonce eg: multiSigContract.nonce.call()
-- ==destination== Transfer from contract to destination address
-- ==value== Transfer amount eg: web3.toWei(1, 'ether')
-- ==data== SHA3 hash to be signed
+##### Inputs
+* `privateKey(s)`：  The ETH private key(s) to sign
+* `multi`： Multi sig wallet contract address
+* `nonce`：  Multi contract nonce eg: multiSigContract.nonce.call()
+* `destination`： Transfer from contract to destination address
+* `value`： Transfer amount eg: web3.toWei(1, 'ether')
+* `data`： SHA3 hash to be signed
 
-###### Return value
+##### Return value
 Signed hash as signature object with v, r and s values.
 
 #### Usage
