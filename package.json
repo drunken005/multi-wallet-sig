@@ -1,6 +1,6 @@
 {
   "name": "multi-wallet-sig",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "multisig for Ethereum using detached signatures",
   "main": "lib/index.js",
   "scripts": {
