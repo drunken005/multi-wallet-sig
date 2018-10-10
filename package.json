@@ -1,0 +1,24 @@
+{
+  "name": "multi-wallet-sig",
+  "version": "1.0.0",
+  "description": "multisig for Ethereum using detached signatures",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha lib/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drunken005/multi-wallet-sig.git"
+  },
+  "keywords": [
+    "Ethereum",
+    "Wallet",
+    "Multisig"
+  ],
+  "author": "drunken",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drunken005/multi-wallet-sig/issues"
+  },
+  "homepage": "https://github.com/drunken005/multi-wallet-sig#readme"
+}
