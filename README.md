@@ -1,6 +1,29 @@
 # multi-wallet-sig
 multisig for Ethereum using detached signatures
 
+## About
+Ethereum multisig contract Using 0x19 thus makes it possible to extend the scheme by defining a version 0x45 (E) to handle these kinds of signatures.
+This package provides a pre-signed transaction message for the contract function
+
+### Example
+```bash
+function submitTransactionPreSigned(address destination, uint value, bytes data, uint nonce, uint8 v, bytes32 r, bytes32 s)
+    public
+    returns (bytes32 transactionHash)
+{
+   // Arguments when calculating hash to validate
+    // 1: byte(0x19) - the initial 0x19 byte
+    // 2: byte(0) - the version byte
+    // 4: this - the validator address
+    // 4-7 : Application specific data
+    transactionHash = keccak256(byte(0x19),byte(0),this,destination, value, data, nonce);
+    sender = ecrecover(transactionHash, v, r, s);
+    // ...
+}
+```
+From [EIP 191](https://github.com/Arachnid/EIPs/commit/8f8b68d37a4c9e1207d1f3f8b987d62270824ce0)
+
+
 ## Get Started
 ```bash
 npm install multi-wallet-sig --save
