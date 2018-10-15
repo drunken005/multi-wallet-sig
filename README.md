@@ -35,15 +35,11 @@ npm install multi-wallet-sig --save
 npm test
 ```
 ### Functions
-#### `createSig(s)(privateKey, multi, nonce, destination, value, data)`
+#### `createSig(s)(privateKey, ...args)`
 Signs a sha3 message hash with the private key
 ##### Inputs
 * `privateKey(s)`：  The ETH private key(s) to sign
-* `multi`： Multi sig wallet contract address
-* `nonce`：  Multi contract nonce eg: multiSigContract.nonce.call()
-* `destination`： Transfer from contract to destination address
-* `value`： Transfer amount eg: web3.toWei(1, 'ether')
-* `data`： SHA3 hash to be signed
+* `args`： Contract method arguments
 
 ##### Return value
 Signed hash as signature object with v, r and s values.
